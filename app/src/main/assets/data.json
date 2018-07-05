@@ -1,0 +1,55 @@
+{
+
+  "root" : [
+    {
+      "txt" : "How many months have 28 days?",
+      "op1" : "1",
+      "op2" : "12",
+      "op3" : "None",
+      "op4" : "Depends if there's a leap year or not",
+      "ans" : "12"
+    },
+    {
+      "txt" : "If you pass out the 2nd person in a race, what position are you?",
+      "op1" : "1",
+      "op2" : "2",
+      "op3" : "3",
+      "op4" : "The same",
+      "ans" : "2"
+    },
+    {
+      "txt" : "How does this proverb continue: 'The squeaking wheel gets ...'",
+      "op1" : "The rust",
+      "op2" : "The grease",
+      "op3" : "",
+      "op4" : "",
+      "ans" : "The rust"
+    },
+    {
+      "txt" : "I don't speak, I cannot hear, but I always tell the truth.",
+      "op1" : "The watch",
+      "op2" : "The mirror",
+      "op3" : "",
+      "op4" : "",
+      "ans" : "The watch"
+    },
+    {
+      "txt" : "Who was the first Roman Emperor?",
+      "op1" : "",
+      "op2" : "",
+      "op3" : "",
+      "op4" : "",
+      "ans" : "Augustus"
+    },
+    {
+      "txt" : "What year was the last Roman Emperor Constantine XI defeated?",
+      "op1" : "",
+      "op2" : "",
+      "op3" : "",
+      "op4" : "",
+      "ans" : "1453 AD"
+    }
+
+  ]
+
+}

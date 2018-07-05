@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#5e35b1</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="colorBack">#09C6DF</color>
+    <color name="gradStart">#e91e63</color>
+    <color name="gradEnd">#5e35b1</color>
+    <color name="backOne">#42CCC8</color>
+    <color name="backTwo">#4FA0CF</color>
+    <color name="backThree">#5469A4</color>
+    <color name="backFour">#71707E</color>
+
+    <array name="color_prog">
+        <item name="e">#09C6DF</item>
+        <item name="w">#e91e63</item>
+        <item name="q">#f2a723</item>
+    </array>
+</resources>

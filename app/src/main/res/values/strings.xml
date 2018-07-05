@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">6th Pick</string>
+    <string name="get_result">Get Result!</string>
+    <string name="AppName">6 Pick</string>
+    <string name="desc">6 Questions, 60 Seconds and a progress bar without progress. Are you ready?</string>
+</resources>
