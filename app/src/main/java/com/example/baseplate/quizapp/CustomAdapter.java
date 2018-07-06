@@ -28,6 +28,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
     static boolean check2_flag = false;
     static boolean check3_flag = false;
     static boolean check4_flag = false;
+    static boolean text_flag = false;
 
     public static class MyViewHolder extends RecyclerView.ViewHolder{
 
@@ -133,11 +134,10 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if(checkBoxOne.getText().toString().equals(dataSet.get(listPosition).getAnswer())) {
-                    if (!check1_flag){
+                    do {
                         push_pref();
                         check1_flag = true;
-                    }
-
+                    }while (!check1_flag);
                     Log.d("CORRECT", "Correct");
                     counter++;
                     Log.d("ADebugTag", "Value: " + Integer.toString(counter));
@@ -151,10 +151,10 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if(checkBoxTwo.getText().toString().equals(dataSet.get(listPosition).getAnswer())){
-                    if (!check2_flag){
+                    do {
                         push_pref();
                         check2_flag = true;
-                    }
+                    }while (!check2_flag);
                     Log.d("CORRECT", "Correct");
                     counter++;
                     Log.d("ADebugTag", "Value: " + Integer.toString(counter));
@@ -168,10 +168,10 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if(checkBoxThree.getText().toString().equals(dataSet.get(listPosition).getAnswer())){
-                    if (!check3_flag){
+                    do {
                         push_pref();
                         check3_flag = true;
-                    }
+                    }while (!check3_flag);
                     Log.d("CORRECT", "Correct");
                     counter++;
                     Log.d("ADebugTag", "Value: " + Integer.toString(counter));
@@ -185,10 +185,10 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if(checkBoxFour.getText().toString().equals(dataSet.get(listPosition).getAnswer())) {
-                    if (!check4_flag){
+                    do {
                         push_pref();
                         check4_flag = true;
-                    }
+                    }while (!check4_flag);
                     Log.d("CORRECT", "Correct");
                     counter++;
                     Log.d("ADebugTag", "Value: " + Integer.toString(counter));
@@ -233,7 +233,10 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                     view.getContext().startActivity(new Intent(view.getContext(), StartActivity.class));
 
                 if(textBox.getText().toString().equals(dataSet.get(listPosition).getAnswer())) {
-                    push_pref();
+                    do {
+                        push_pref();
+                        text_flag = true;
+                    }while (!text_flag);
                     Log.d("CORRECT", "Correct");
                     counter++;
                     Log.d("ADebugTag", "Value: " + Integer.toString(counter));
