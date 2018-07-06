@@ -239,7 +239,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                     if(!text_flag){
                         push_pref();
                         text_flag = true;
-                        submit.setVisibility(View.INVISIBLE);
+                        submit.setEnabled(false);
                     }else{
                         push_pref();
                    }
