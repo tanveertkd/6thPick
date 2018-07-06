@@ -134,10 +134,10 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if(checkBoxOne.getText().toString().equals(dataSet.get(listPosition).getAnswer())) {
-                    do {
+                    if (!check1_flag){
                         push_pref();
                         check1_flag = true;
-                    }while (!check1_flag);
+                    }
                     Log.d("CORRECT", "Correct");
                     counter++;
                     Log.d("ADebugTag", "Value: " + Integer.toString(counter));
@@ -151,10 +151,11 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if(checkBoxTwo.getText().toString().equals(dataSet.get(listPosition).getAnswer())){
-                    do {
+                    if (!check2_flag){
                         push_pref();
                         check2_flag = true;
-                    }while (!check2_flag);
+                    }
+
                     Log.d("CORRECT", "Correct");
                     counter++;
                     Log.d("ADebugTag", "Value: " + Integer.toString(counter));
@@ -168,10 +169,11 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if(checkBoxThree.getText().toString().equals(dataSet.get(listPosition).getAnswer())){
-                    do {
+                    if (!check3_flag){
                         push_pref();
                         check3_flag = true;
-                    }while (!check3_flag);
+                    }
+
                     Log.d("CORRECT", "Correct");
                     counter++;
                     Log.d("ADebugTag", "Value: " + Integer.toString(counter));
@@ -185,10 +187,11 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if(checkBoxFour.getText().toString().equals(dataSet.get(listPosition).getAnswer())) {
-                    do {
+                    if (!check4_flag){
                         push_pref();
                         check4_flag = true;
-                    }while (!check4_flag);
+                    }
+
                     Log.d("CORRECT", "Correct");
                     counter++;
                     Log.d("ADebugTag", "Value: " + Integer.toString(counter));

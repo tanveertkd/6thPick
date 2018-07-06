@@ -3,8 +3,8 @@
   "root" : [
     {
       "txt" : "How many months have 28 days?",
-      "op1" : "1",
-      "op2" : "12",
+      "op1" : "12",
+      "op2" : "1",
       "op3" : "None",
       "op4" : "Depends if there's a leap year or not",
       "ans" : "12"
