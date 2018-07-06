@@ -24,6 +24,11 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
     Context context;
     static boolean flush_flag= false;
 
+    static boolean check1_flag = false;
+    static boolean check2_flag = false;
+    static boolean check3_flag = false;
+    static boolean check4_flag = false;
+
     public static class MyViewHolder extends RecyclerView.ViewHolder{
 
 
@@ -128,8 +133,10 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if(checkBoxOne.getText().toString().equals(dataSet.get(listPosition).getAnswer())) {
-
-                    push_pref();
+                    if (!check1_flag){
+                        push_pref();
+                        check1_flag = true;
+                    }
 
                     Log.d("CORRECT", "Correct");
                     counter++;
@@ -144,9 +151,10 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if(checkBoxTwo.getText().toString().equals(dataSet.get(listPosition).getAnswer())){
-
-                    push_pref();
-
+                    if (!check2_flag){
+                        push_pref();
+                        check2_flag = true;
+                    }
                     Log.d("CORRECT", "Correct");
                     counter++;
                     Log.d("ADebugTag", "Value: " + Integer.toString(counter));
@@ -160,9 +168,10 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if(checkBoxThree.getText().toString().equals(dataSet.get(listPosition).getAnswer())){
-
-                    push_pref();
-
+                    if (!check3_flag){
+                        push_pref();
+                        check3_flag = true;
+                    }
                     Log.d("CORRECT", "Correct");
                     counter++;
                     Log.d("ADebugTag", "Value: " + Integer.toString(counter));
@@ -176,9 +185,10 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if(checkBoxFour.getText().toString().equals(dataSet.get(listPosition).getAnswer())) {
-
-                    push_pref();
-
+                    if (!check4_flag){
+                        push_pref();
+                        check4_flag = true;
+                    }
                     Log.d("CORRECT", "Correct");
                     counter++;
                     Log.d("ADebugTag", "Value: " + Integer.toString(counter));
@@ -192,9 +202,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if(radioOne.getText().toString().equals(dataSet.get(listPosition).getAnswer())) {
-
-                    push_pref();
-
+                          push_pref();
                     Log.d("CORRECT", "Correct");
                     counter++;
                     Log.d("ADebugTag", "Value: " + Integer.toString(counter));
@@ -207,9 +215,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if(radioTwo.getText().toString().equals(dataSet.get(listPosition).getAnswer())) {
-
                     push_pref();
-
                     Log.d("CORRECT", "Correct");
                     counter++;
                     Log.d("ADebugTag", "Value: " + Integer.toString(counter));
@@ -223,14 +229,11 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
             @Override
             public void onClick(View view) {
 
-//                Log.d("list : ", listPosition + "");
                 if (listPosition == 5)
                     view.getContext().startActivity(new Intent(view.getContext(), StartActivity.class));
 
                 if(textBox.getText().toString().equals(dataSet.get(listPosition).getAnswer())) {
-
                     push_pref();
-
                     Log.d("CORRECT", "Correct");
                     counter++;
                     Log.d("ADebugTag", "Value: " + Integer.toString(counter));
@@ -273,6 +276,5 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
     public int getItemCount() {
         return dataSet.size();
     }
-
 
 }

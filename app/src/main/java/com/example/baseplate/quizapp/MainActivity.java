@@ -54,7 +54,6 @@ public class MainActivity extends AppCompatActivity {
         countDownTimer.start();
 
         data = load_json_data();
-//        Toast.makeText(getApplicationContext(), "data : " + data + "", Toast.LENGTH_SHORT).show();
 
         dataset = parse_json(data);
         myOnClickListener = new MyOnClickListener(this);
@@ -66,12 +65,8 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutmanager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
 
-//        Log.d("test : ", dataset.get(0).toString());
-
         adapter = new CustomAdapter(dataset, getApplicationContext());
         recyclerView.setAdapter(adapter);
-
-
     }
 
     private static class MyOnClickListener implements View.OnClickListener {
@@ -123,8 +118,6 @@ public class MainActivity extends AppCompatActivity {
 
 
                 rawdata.add(new pojo(txt, answer, options));
-//                Log.d("test text : ", txt + answer + "");
-//                Log.d("test : ", rawdata.get(i).getQuestion() + "");
             }
 
             return  rawdata;
