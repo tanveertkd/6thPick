@@ -236,10 +236,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                     view.getContext().startActivity(new Intent(view.getContext(), StartActivity.class));
 
                 if(textBox.getText().toString().equals(dataSet.get(listPosition).getAnswer())) {
-                    do {
+                    if(!text_flag){
                         push_pref();
                         text_flag = true;
-                    }while (!text_flag);
+                        submit.setVisibility(View.INVISIBLE);
+                    }else{
+                        push_pref();
+                   }
                     Log.d("CORRECT", "Correct");
                     counter++;
                     Log.d("ADebugTag", "Value: " + Integer.toString(counter));
